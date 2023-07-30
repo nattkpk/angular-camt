@@ -9,9 +9,11 @@
 
         <img [src]="imgSrc">
         <div *ngIf="title">{{ count }} : {{ title }}</div>
-        <button [disabled]="!title" class="btn btn-primary" (click)="handleClickButton()">Next Caption</button>
-        <button [disabled]="!title" class="btn btn-primary" (click)="handleClickDeButton()">Next Caption and
+        <button [hidden]="!title" class="btn btn-primary" (click)="handleClickButton()">Next Caption</button>
+        <button [hidden]="!title" class="btn btn-primary" (click)="handleClickDeButton()">Next Caption and
             Delete</button>
+            <button [hidden]="title" class="btn btn-primary" (click)="restart()">RESTART</button>
+
     </div>
 
     <div class="container">

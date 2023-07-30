@@ -79,8 +79,35 @@ export class AppComponent {
   private getRandomInt(max: number) {
     return Math.floor(Math.random() * max);
   }
-}
 
+restart() {
+  this.captionList = [
+    {
+      id: 1,
+      message: "เป็นคนไม่เอาถ่าน เพราะที่บ้านมีเตาเเก๊ส",
+      icon: "./assets/icons/ic_funny_01.png",
+    },
+    {
+      id: 2,
+      message: "ผมไม่เคยดีครับ เพราะผมแตกปลาย",
+      icon:  "./assets/icons/ic_funny_02.png"
+    },
+    {
+      id: 3,
+      message: "แคปชั่นไม่รู้ แต่แคปหมูไม่แน่",
+      icon:  "./assets/icons/ic_funny_03.png"
+    },
+    {
+      id: 4,
+      message: "ไม่มีหรอกหัวหอมให้เธอหั่น มีแต่หัวฉันนี่แหละให้เธอหอม",
+      icon:  "./assets/icons/ic_funny_04.png"
+    },
+  ];
+
+  this.title = this.randomCaption();
+  this.count = 0;
+}
+}
 
 //Type inference
 // public messages: string[] = [
